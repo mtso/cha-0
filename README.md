@@ -21,7 +21,7 @@ $ yarn add cha-0
 ```js
 const cha0 = require('cha-0')
 const fooColor = cha0('foo')
-console.log(fooColor) // "#3dc680"
+console.log('#' + fooColor) // "#3dc680"
 ```
 
 [Try it out at runkit.com](https://npm.runkit.com/cha-0)
