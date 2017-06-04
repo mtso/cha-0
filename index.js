@@ -1,3 +1,5 @@
+'use strict';
+
 const hex = {
   0x0: '0',
   0x1: '1',
@@ -14,20 +16,23 @@ const hex = {
   0xc: 'c',
   0xd: 'd',
   0xe: 'e',
-  0xf: 'f',
-}
+  0xf: 'f'
+};
 
 module.exports = (string) => {
-  let raw = 274777
-  for (var i = 0; i < string.length; i++) {
-    raw = raw * string.charCodeAt(i) + 33
-    raw = Math.floor(raw % 999999)
+  let raw = 274777;
+  let hash = '';
+
+  for (let i = 0; i < string.length; i++) {
+    raw = raw * string.charCodeAt(i) + 33;
+    raw = Math.floor(raw % 999999);
   }
-  let hash = ''
-  for (var i = 0; i < 6; i++) {
-    let c = hex[raw % 16]
-    hash += c
-    raw = Math.floor(raw / 16)
+  
+  for (let i = 0; i < 6; i++) {
+    let c = hex[raw % 16];
+    hash += c;
+    raw = Math.floor(raw / 16);
   }
-  return hash
-}
+
+  return hash;
+};
