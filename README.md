@@ -1,6 +1,8 @@
 # CHA-0
 
-CHA-0 is a color hashing algorithm designed to output a random hex color string for a given string input. It achieves a fairly random distribution over the hex color space through a multiplicative hashing scheme.
+CHA-0 is a color hashing algorithm designed to output a random hex color string for a given string input. CHA-0 gives a good distribution over the hex color space through a multiplicative hashing scheme.
+
+[![Build Status](https://travis-ci.org/mtso/cha-0.svg?branch=master)](https://travis-ci.org/mtso/cha-0)
 
 ## Install
 
